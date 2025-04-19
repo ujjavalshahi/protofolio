@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Self</title>
+  <script defer src="script.js"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    nav {
+      background-color: aliceblue;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 2rem;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-size: 2rem;
+      font-weight: 600;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+      font-size: 1.2rem;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: black;
+    }
+
+    .nav-links a:hover {
+      color: gray;
+      text-decoration: underline;
+      text-underline-offset: 0.5rem;
+      text-decoration-color: rgb(180, 180, 180);
+    }
+
+    #profile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: rgb(241, 241, 241);
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+
+    .profile-img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .title {
+      font-size: 2rem;
+      margin-top: 1rem;
+    }
+
+    .p1 {
+      font-size: 1rem;
+      font-weight: 500;
+    }
+
+    .btn-container {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      font-weight: 600;
+      padding: 0.75rem;
+      min-width: 6rem;
+      border-radius: 2rem;
+      transition: all 300ms ease-in;
+      border: none;
+    }
+
+    .btn-1 {
+      background-color: black;
+      color: white;
+      cursor: pointer;
+    }
+
+    .btn-1:hover {
+      background-color: white;
+      color: black;
+      border: 1px solid black;
+    }
+
+    .btn-2 {
+      background-color: white;
+      color: black;
+      border: 1px solid black;
+    }
+
+    .btn-2:hover {
+      background-color: black;
+      color: white;
+    }
+
+    #project {
+      padding: 2rem 1rem;
+    }
+
+    #project h1 {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    .projects-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .project-details-container {
+      border: 1px solid rgb(163, 163, 163);
+      border-radius: 1rem;
+      padding: 1rem;
+      width: 100%;
+      max-width: 400px;
+      text-align: center;
+    }
+
+    #contact {
+      background-color: antiquewhite;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+
+    .contact-box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      padding: 1rem;
+      border: 1px solid rgb(163, 163, 163);
+      border-radius: 1rem;
+    }
+
+    .contact-info a {
+      text-decoration: none;
+      color: black;
+      font-weight: 500;
+    }
+
+    .contact-info a:hover {
+      color: gray;
+    }
+
+    @media (min-width: 768px) {
+      #profile {
+        flex-direction: row;
+        gap: 2rem;
+      }
+      .profile-img{
+        flex-direction: column;
+      }
+
+      .projects-container {
+        flex-direction: row;
+        justify-content: center;
+      }
+
+      .contact-box {
+        flex-direction: row;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <h1 class="logo">Ujjaval S.</h1>
+    <ul class="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#project">Projects</a></li>
+      <li><a href="#contact">Contacts</a></li>
+    </ul>
+  </nav>
+
+  <section id="profile">
+    <img class="profile-img" src="my photo1.jpg" alt="Profile Image" />
+    <div>
+      <h1 class="title">Ujjaval Shahi</h1>
+      <p class="p1">web developer</p>
+      <div class="btn-container">
+        <button class="btn btn-1" onclick="downloadCV()">Download CV</button>
+        <button class="btn btn-2" onclick="location.href='mailto:ujjavalshahi939@gmail.com'">
+          Hire Me
+        </button>
+        
+      </div>
+    </div>
+  </section>
+
+  <section id="project">
+    <h1 class="title">Projects</h1>
+    <div class="projects-container">
+      <div class="project-details-container">
+        <h2>Trading App</h2>
+        <button class="btn btn-1" onclick="openProject('https://example.com/trading')">Live link</button>
+      </div>
+      <div class="project-details-container">
+        <h2>Zomato App</h2>
+        <button class="btn btn-1" onclick="openProject('https://example.com/zomato')">Live link</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <p class="p1">Get in Touch</p>
+    <h1 class="title">Contact Me</h1>
+    <div class="contact-box">
+      <div class="contact-info">
+        <p><a href="mailto:ujjavalshahi939@gmail.com">ujjavalshahi939@gmail.com</a></p>
+      </div>
+      <div class="contact-info">
+        <p><a href="https://linkedin.com">LinkedIn</a></p>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
